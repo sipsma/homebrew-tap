@@ -5,20 +5,20 @@
 class Dagger < Formula
   desc "Dagger is a programmable deployment system."
   homepage "https://github.com/dagger/dagger"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://dagger-release-34b7b6b5-0436-46d4-939e-a52b1da53244.s3.us-west-2.amazonaws.com/dagger/releases/0.0.3/dagger_v0.0.3_darwin_amd64.tar.gz"
-      sha256 "483dde635a1ab3b8fd861a0a0cbb368f5ce445976fa642ba752d3c9779abf301"
+      url "https://dagger-release-34b7b6b5-0436-46d4-939e-a52b1da53244.s3.us-west-2.amazonaws.com/dagger/releases/0.0.4/dagger_0.0.4_darwin_amd64.tar.gz"
+      sha256 "e50e964978c6bf9eff11d039db00e4cafa89f62593c87d417b2d210e011cd6ad"
 
       def install
         bin.install "dagger"
       end
     end
     if Hardware::CPU.arm?
-      url "https://dagger-release-34b7b6b5-0436-46d4-939e-a52b1da53244.s3.us-west-2.amazonaws.com/dagger/releases/0.0.3/dagger_v0.0.3_darwin_arm64.tar.gz"
-      sha256 "0dfc15700692f8ca072c15eeb2fa11211d1df9e8af4909f94e6f2e634962508c"
+      url "https://dagger-release-34b7b6b5-0436-46d4-939e-a52b1da53244.s3.us-west-2.amazonaws.com/dagger/releases/0.0.4/dagger_0.0.4_darwin_arm64.tar.gz"
+      sha256 "d906cc07065b1829051046784c81bd6fe7ac4d916ede4d3bd144d8aedd5f3099"
 
       def install
         bin.install "dagger"
@@ -27,17 +27,17 @@ class Dagger < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dagger-release-34b7b6b5-0436-46d4-939e-a52b1da53244.s3.us-west-2.amazonaws.com/dagger/releases/0.0.3/dagger_v0.0.3_linux_arm64.tar.gz"
-      sha256 "a46fdf94ad6eacf5a07ece952a65aa8d4f18fba6d89d74807a7db3c96c98c88d"
+    if Hardware::CPU.intel?
+      url "https://dagger-release-34b7b6b5-0436-46d4-939e-a52b1da53244.s3.us-west-2.amazonaws.com/dagger/releases/0.0.4/dagger_0.0.4_linux_amd64.tar.gz"
+      sha256 "2ef4ced95ffeb7411b3a0b75d6d52fe5248fb83b84bebe83225fa8c6b816e87a"
 
       def install
         bin.install "dagger"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://dagger-release-34b7b6b5-0436-46d4-939e-a52b1da53244.s3.us-west-2.amazonaws.com/dagger/releases/0.0.3/dagger_v0.0.3_linux_amd64.tar.gz"
-      sha256 "46770589e440da4a0d87f326fd6748b8b9c58bfaa7d981e02b03648b6c534bf4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://dagger-release-34b7b6b5-0436-46d4-939e-a52b1da53244.s3.us-west-2.amazonaws.com/dagger/releases/0.0.4/dagger_0.0.4_linux_arm64.tar.gz"
+      sha256 "e09919007c86e75739da90143e214911791e9142cf8b5f9a2d27becc08323440"
 
       def install
         bin.install "dagger"
